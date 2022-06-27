@@ -1,0 +1,46 @@
+.Accordion {
+  padding: 0 var(--spacing-medium);
+
+  &__Item {
+    padding: 18px 0;
+    border-bottom: 1px solid #f3f4f8;
+  }
+
+  .Item {
+    &__Header {
+      display: flex;
+      align-items: center;
+      font-size: 18px;
+      line-height: 22px;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      &__Icon {
+        width: 20px;
+        height: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 19px;
+      }
+
+      &__IndicateIcon {
+        margin-left: auto;
+        font-weight: 700;
+      }
+    }
+
+    &__ContentContainer {
+      max-height: 0;
+      overflow: hidden;
+      font-size: 14px;
+      transition: max-height 0.3s ease-in-out;
+    }
+
+    &__Content {
+      padding-top: 15px;
+    }
+  }
+}

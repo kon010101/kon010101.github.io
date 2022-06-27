@@ -1,0 +1,245 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 16px;
+
+  --color-white: #fff;
+  --color-black: #000;
+  --color-accent: #007381;
+
+  --spacing-tiny: 0.5rem;
+  --spacing-small: 1rem;
+  --spacing-medium: 2rem;
+  --spacing-large: 3rem;
+  --spacing-extra-large: 4rem;
+}
+
+body {
+  display: flex;
+  width: 100vw;
+  justify-content: center;
+  font-family: "Montserrat", sans-serif;
+}
+
+.Container {
+  position: relative;
+  margin: 0 auto var(--spacing-medium);
+  padding-top: var(--spacing-small);
+  max-width: 1048px;
+  overflow: hidden;
+
+  @media screen and (min-width: 1008px) {
+    box-shadow: 0 0 8px var(--color-black);
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: var(--spacing-small);
+    transform: translateY(-100%);
+    background-color: var(--color-accent);
+  }
+}
+
+.Header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  margin-bottom: var(--spacing-large);
+
+  @media screen and (min-width: 1008px) {
+    flex-direction: row;
+  }
+
+  &__Image {
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    margin: var(--spacing-small) 0 var(--spacing-medium);
+
+    @media screen and (min-width: 1008px) {
+      margin-left: var(--spacing-medium);
+    }
+  }
+
+  .Title {
+    display: flex;
+    flex-direction: column;
+
+    &__Name {
+      font-size: 3rem;
+      line-height: 1.2;
+      margin-bottom: var(--spacing-medium);
+      text-align: center;
+
+      @media screen and (min-width: 1008px) {
+        text-align: left;
+        margin-bottom: var(--spacing-large);
+      }
+
+      span {
+        display: block;
+        color: var(--color-accent);
+      }
+    }
+
+    &__Position {
+      font-size: 20px;
+      line-height: 1.2;
+      text-align: center;
+      margin-bottom: var(--spacing-medium);
+
+      @media screen and (min-width: 1008px) {
+        text-align: left;
+      }
+    }
+  }
+
+  .Data {
+    width: 100%;
+    background-color: var(--color-accent);
+    display: flex;
+    flex-direction: column;
+    padding: var(--spacing-medium);
+
+    @media screen and (min-width: 1008px) {
+      align-self: stretch;
+      justify-content: center;
+      width: 400px;
+      border-radius: 0 0 0 20px;
+    }
+
+    .Item {
+      display: flex;
+      align-items: center;
+      font-weight: 300;
+
+      &:not(:last-of-type) {
+        margin-bottom: var(--spacing-small);
+      }
+
+      @media screen and (min-width: 1008px) {
+      }
+
+      &__Icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--color-black);
+        color: var(--color-accent);
+        width: 25px;
+        height: 25px;
+        padding: 4px;
+        border-radius: 50%;
+        margin-right: var(--spacing-small);
+
+        svg {
+          width: 18px;
+        }
+      }
+
+      &__Text {
+        color: var(--color-white);
+      }
+    }
+  }
+}
+
+.Section {
+  width: 100%;
+  padding: 0 var(--spacing-medium);
+
+  &__Title {
+    position: relative;
+    width: 25%;
+    padding-right: var(--spacing-medium);
+    text-align: right;
+    font-size: 24px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      margin-left: var(--spacing-small);
+      height: 4px;
+      width: 100vw;
+      border-radius: 4px;
+      background-color: var(--color-accent);
+    }
+  }
+
+  &__Content {
+    margin: var(--spacing-medium) 0 0 25%;
+    padding-bottom: var(--spacing-large);
+    line-height: 1.5;
+
+    &.-Column {
+      display: flex;
+
+      .ContentBlock__ListItem {
+        max-width: 90%;
+      }
+
+      .ContentBlock__Title {
+        margin-bottom: var(--spacing-tiny);
+      }
+    }
+  }
+}
+
+.ContentBlock {
+  &:not(:last-of-type) {
+    margin-bottom: var(--spacing-small);
+  }
+
+  &__Header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__Title {
+    font-size: 1rem;
+    font-weight: 700;
+
+    @media screen and (min-width: 1008px) {
+      font-size: 1.125rem;
+    }
+  }
+
+  &__Date {
+    text-align: right;
+    color: var(--color-accent);
+    font-family: "Roboto";
+  }
+
+  &__Subtitle {
+    margin-bottom: var(--spacing-small);
+    font-style: italic;
+  }
+
+  &__List {
+    list-style: disc;
+  }
+
+  &__ListItem {
+    margin-left: var(--spacing-medium);
+    line-height: 1.6;
+
+    @media screen and (min-width: 1008px) {
+      max-width: 75%;
+    }
+  }
+}
+
+.Accordion {
+  .Item__Content {
+    line-height: 1.5;
+  }
+}
