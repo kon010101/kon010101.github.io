@@ -16,7 +16,7 @@ git add dist/
 git commit -m "Deploy to subtree branch (gh-pages)"
 
 # deploy to subtree branch
-git subtree push --prefix dist origin gh-pages
+git subtree push --prefix dist origin gh-page
 
 # undo last commit
 git reset --soft HEAD~
