@@ -1,10 +1,14 @@
 {
   "devDependencies": {
+    "@parcel/transformer-sass": "^2.6.2",
+    "parcel": "^2.6.2",
     "sass": "^1.52.3"
   },
+  "source": "src/index.html",
   "scripts": {
-    "start": "parcel src/index.html",
-    "deploy": "deploy.sh"
+    "start": "parcel",
+    "build": "parcel build",
+    "deploy": "scripts/deploy.sh"
   },
   "dependencies": {}
 }
