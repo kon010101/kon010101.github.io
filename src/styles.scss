@@ -121,10 +121,7 @@ body {
       font-weight: 300;
 
       &:not(:last-of-type) {
-        margin-bottom: var(--spacing-small);
-      }
-
-      @media screen and (min-width: 1008px) {
+        margin-bottom: var(--spacing-medium);
       }
 
       &__Icon {
@@ -145,6 +142,7 @@ body {
       }
 
       &__Text {
+        text-decoration: none;
         color: var(--color-white);
       }
     }
