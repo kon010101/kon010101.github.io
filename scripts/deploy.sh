@@ -7,6 +7,4 @@ rm -rf dist/
 npm run build
 
 # deploy to gh pages
-gh-pages -d dist
-
-
+echo 'konradweiss.dev' > ./dist/CNAME && gh-pages -d dist
