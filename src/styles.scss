@@ -200,11 +200,19 @@ body {
   &__Header {
     display: flex;
     justify-content: space-between;
+
+    @media screen and (max-width: 640px) {
+      position: relative;
+    }
   }
 
   &__Title {
     font-size: 1rem;
     font-weight: 700;
+
+    @media screen and (max-width: 640px) {
+      max-width: calc(100% - 75px);
+    }
 
     @media screen and (min-width: 1008px) {
       font-size: 1.125rem;
@@ -215,11 +223,22 @@ body {
     text-align: right;
     color: var(--color-accent);
     font-family: "Roboto";
+
+    @media screen and (max-width: 640px) {
+      position: absolute;
+      right: 0;
+      max-width: 75px;
+      font-size: 12px;
+    }
   }
 
   &__Subtitle {
     margin-bottom: var(--spacing-small);
     font-style: italic;
+
+    @media screen and (max-width: 640px) {
+      max-width: calc(100% - 75px);
+    }
   }
 
   &__List {
