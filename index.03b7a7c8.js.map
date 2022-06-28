@@ -1,1 +1,0 @@
-{"mappings":"AAEkB,G,GAAc,CAC9BA,YAAa,iCACbC,aAAc","sources":["src/index.js"],"sourcesContent":["const Accordion = require(\"./accordion\");\n\nconst accordion = new Accordion({\n  headerClass: \".Accordion__Item .Item__Header\",\n  contentClass: \".Item__ContentContainer\",\n});\n"],"names":["headerClass","contentClass"],"version":3,"file":"index.03b7a7c8.js.map"}
